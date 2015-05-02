@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Stylesheets/Viatorum.css"/>
+		<script src="Scripts/JQuery.js"></script>
+		<script>
+			$(document).ready(function() {
+				// Banana?
+				var $theSuperCoolLogga = $("#Logga");
+				$theSuperCoolLogga.css({"opacity": 0});
+				$theSuperCoolLogga.animate({"opacity": 1}, 1000);
+
+				var $menuUL = $("#Main-menu > ul");
+				$menuUL.css({"margin-top": -5, "opacity": 0});
+				$menuUL.animate({"margin-top": 0, "opacity": 1}, 500);
+				
+				/*
+				var init = $menuUL.offset().top;
+				$(window).scroll(function() {
+					if($(document).scrollTop() < init) {
+						$menuUL.toggleClass("docked", false);
+					} else {
+						$menuUL.toggleClass("docked", true);
+					}
+				});
+				*/
+			});
+		</script>
+		<title>Viatorum</title>
+	</head>
+	<body>
+		<div id="Background"></div>
+		<nav id="Main-menu">
+			<img id="Logga" src="Images/ViatorumLogga.png"></img>
+			<hr/>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Community</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+		<div id="Content">
+			<h1> Hello, world! </h1>
+			<p> This is a paragraph.</p>
+		</div>
+		<div id="Footer">
+			<div>
+				<h2>Information</h2>
+				<p>Web page manager: ...</p>
+				<hr>
+				<p style="color: rgba(255, 255, 255, 0.4); font-family: Arial;">
+					Copyright © 2015. Hosting provided by GitHub.com.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
